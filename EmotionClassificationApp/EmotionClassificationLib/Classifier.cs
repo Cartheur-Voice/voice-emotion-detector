@@ -20,15 +20,13 @@ namespace EmotionClassificationLib
 
         public void LoadData(string directoryPath)
         {
-            if (Directory.Exists(directoryPath))
-            {
-                audioFiles.AddRange(Directory.GetFiles(directoryPath, "*.wav"));
-                LoadEmotionLabels();
-            }
-            else
+            if (!Directory.Exists(directoryPath))
             {
                 throw new DirectoryNotFoundException($"The directory {directoryPath} does not exist.");
             }
+
+            audioFiles.AddRange(Directory.GetFiles(directoryPath, "*.wav"));
+            LoadEmotionLabels();
         }
 
         private void LoadEmotionLabels()
@@ -64,7 +62,6 @@ namespace EmotionClassificationLib
 
         public void TrainModel()
         {
-            // Extract features from audio files
             var features = new List<double[]>();
             var labels = new List<int>();
 
@@ -78,14 +75,12 @@ namespace EmotionClassificationLib
                 labels.Add(label);
             }
 
-            // Convert lists to arrays
             var featureArray = features.ToArray();
             var labelArray = labels.ToArray();
 
-            // Train the SVM model
             var teacher = new SequentialMinimalOptimization<Gaussian>()
             {
-                Complexity = 100 // Regularization parameter
+                Complexity = 100
             };
 
             svm = teacher.Learn(featureArray, labelArray);
@@ -94,7 +89,6 @@ namespace EmotionClassificationLib
         private double[] ExtractFeatures(string filePath)
         {
             // Implement feature extraction logic here
-            // For simplicity, let's return a dummy feature vector
             return new double[] { 0.0, 0.0, 0.0 };
         }
 
@@ -122,8 +116,8 @@ namespace EmotionClassificationLib
             }
 
             var featureVector = ExtractFeatures(audioFilePath);
-            var predictedLabel = svm.Decide(featureVector);
-            return GetEmotionFromLabel(predictedLabel);
+            var predictedLabel = svm.Score(featureVector);
+            return GetEmotionFromLabel((int)predictedLabel);
         }
 
         private string GetEmotionFromLabel(int label)
