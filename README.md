@@ -4,7 +4,7 @@ What is the emotion of the participant at this measure of time?
 
 ## About
 
-This project is an _emotional classification_ example to illustrate the sophistication of an _Emotional Toys_ product that utilizes the RAVDESS dataset to classify emotions from audio files genrated during a live session. It consists of a classifier algorithm library and a console application - it is easily convertible to a Test.
+This project is an _emotional classification_ example to illustrate the sophistication of an _Emotional Toys_ product that trains upon an audio-only RAVDESS dataset leveraging machine learning to classify the emotions of the person sitting-at the microphone. It consists of a classifier algorithm library and a console application - it is easily convertible to a Test.
 
 ## Project structure
 
