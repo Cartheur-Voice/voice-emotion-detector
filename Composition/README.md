@@ -1,20 +1,20 @@
-# Emotion Classification Application
+## Emotional Toys Participant Classification
 
-This project is an Emotion Classification Application that utilizes the RAVDESS dataset to classify emotions from audio files. It consists of a library for handling the emotion classification logic and a console application for user interaction.
+This project is an Emotional Classification Application that utilizes the RAVDESS dataset to classify emotions from audio files. It consists of a library for handling the emotion classification logic and a console application for user interaction.
 
 ## Project Structure
 
 ```
-EmotionClassificationApp
-├── EmotionClassificationLib
-│   ├── EmotionClassificationLib.csproj
+Composition
+├── Library
+│   ├── EmotionClassification.csproj
 │   ├── Classifier.cs
 │   └── RAVDESS
 │       └── RAVDESSParser.cs
-├── EmotionClassificationApp
-│   ├── EmotionClassificationApp.csproj
+├── App
+│   ├── App.csproj
 │   └── Program.cs
-├── EmotionClassificationApp.sln
+├── Compsoition.sln
 └── README.md
 ```
 
@@ -22,15 +22,15 @@ EmotionClassificationApp
 
 ### Prerequisites
 
-- .NET SDK (version 5.0 or higher)
-- A compatible IDE or text editor (e.g., Visual Studio Code)
+- .NET SDK 9.0
+- VSCode or terminal
 
 ### Installation
 
 1. Clone the repository:
    ```
    git clone <repository-url>
-   cd EmotionClassificationApp
+   cd Composition
    ```
 
 2. Restore the dependencies:
@@ -40,7 +40,7 @@ EmotionClassificationApp
 
 ### Running the Application
 
-To run the console application, navigate to the `EmotionClassificationApp` directory and execute the following command:
+To run the console application, navigate to the `App` directory and execute the following command:
 
 ```
 dotnet run
@@ -52,14 +52,10 @@ Upon running the application, you will be prompted to load the RAVDESS dataset. 
 
 ### Library Overview
 
-- **EmotionClassificationLib**: Contains the core functionality for emotion classification.
+- **EmotionClassification**: Contains the core functionality for emotion classification.
   - **Classifier.cs**: Implements methods for loading data, training the model, and predicting emotions.
   - **RAVDESS/RAVDESSParser.cs**: Handles parsing of RAVDESS audio files and extracting metadata.
 
-## Contributing
+### Utility
 
-Contributions are welcome! Please open an issue or submit a pull request for any enhancements or bug fixes.
-
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
+Planned as a part of demonstrating capabilities of Cartheur Research.
