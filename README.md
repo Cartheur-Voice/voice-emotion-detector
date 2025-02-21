@@ -14,12 +14,13 @@ Composition
 │   ├── App.csproj
 │   ├── Program.cs
 |   └── recordings
+│        └── recorded.wav
 ├── Library
 │   ├── EmotionClassification.csproj
 |   ├── Interfaces
 |        ├── IPlayer.cs
 │        └── IRecorder.cs
-|   ├── Players
+|   └── Players
 |        ├── LinuxPlayer.cs
 │        └── UnixPlayerBase.cs
 │   ├── Classifier.cs
