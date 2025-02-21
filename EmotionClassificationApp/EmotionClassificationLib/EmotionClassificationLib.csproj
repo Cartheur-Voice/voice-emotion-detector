@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <RootNamespace>EmotionClassificationLib</RootNamespace>
+    <AssemblyName>EmotionClassificationLib</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="NAudio" Version="2.1.0" />
+    <PackageReference Include="Microsoft.ML" Version="1.5.5" />
+    <PackageReference Include="Microsoft.ML.Data" Version="1.5.5" />
+    <PackageReference Include="Microsoft.ML.MLNet" Version="1.5.5" />
+  </ItemGroup>
+
+</Project>
