@@ -60,16 +60,10 @@ To run the console application, navigate to the `App` directory and execute the 
 dotnet run
 ```
 
-### Usage
+### Behaviour
 
-Upon running the application, you will be prompted to load the RAVDESS dataset. The application will then classify the emotions based on the audio files provided in the dataset. It will be able to get the information from a live recording.
-
-### Library Overview
-
-- **EmotionClassification**: Contains the core functionality for emotion classification.
-  - **Classifier.cs**: Implements methods for loading data, training the model, and predicting emotions.
-  - **RAVDESS/RAVDESSParser.cs**: Handles parsing of RAVDESS audio files and extracting metadata.
+The application will train on the local RAVDESS dataset and predict the participant (you) emotion based upon a samled-input at the microphone, printing it to the terminal. The length of the recording is `1s`, hardcoded presently. A future version will load a configuration file for initialized parameters.
 
 ### Utility
 
-Planned as a part of demonstrating capabilities of Cartheur Research.
+Manifest as a part of capabilities demonstration by the team at Cartheur Research.
