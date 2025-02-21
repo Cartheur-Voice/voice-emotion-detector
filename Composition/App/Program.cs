@@ -1,4 +1,6 @@
 using System;
+using System.IO;
+using System.Threading;
 using System.Threading.Tasks;
 using Cartheur.Presents;
 
@@ -23,9 +25,9 @@ namespace App
                 VoiceRecorder.RecordingFinished += RecordingEvent;
                 // Send over for the file for analysis and return the approximated emotion.
                 //DetectEmotion = new Boagaphish.Analytics.DetectEmotion(ReturnRecordingFilePath(OutputDetectionFileName), "linux");
-
-            Console.WriteLine("Enter the path to the audio file for emotion classification:");
-            string audioFilePath = Console.ReadLine();
+            Thread.Sleep(2000);
+            Console.WriteLine("Getting the file for analysis...");
+            string audioFilePath = ReturnRecordingFilePath("recorded");
 
             // Predict the emotion
             var emotion = classifier.PredictEmotion(audioFilePath);
