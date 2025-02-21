@@ -16,17 +16,17 @@ Composition
 |   └── recordings
 ├── Library
 │   ├── EmotionClassification.csproj
-│   ├── Classifier.cs
-│   ├── LinuxRecorder.cs
-│   ├── Parser.cs
-│   ├── Player.cs
-│   ├── Recorder.cs
 |   ├── Interfaces
 |        ├── IPlayer.cs
 │        └── IRecorder.cs
 |   ├── Players
 |        ├── LinuxPlayer.cs
 │        └── UnixPlayerBase.cs
+│   ├── Classifier.cs
+│   ├── LinuxRecorder.cs
+│   ├── Parser.cs
+│   ├── Player.cs
+│   └── Recorder.cs
 ├── Compsoition.sln
 └── README.md
 ```
