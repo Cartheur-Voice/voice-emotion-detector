@@ -10,8 +10,7 @@ namespace EmotionClassificationApp
             var classifier = new EmotionClassificationLib.Classifier();
 
             // Load the dataset
-            Console.WriteLine("Enter the path to the dataset directory:");
-            string datasetDirectoryPath = Console.ReadLine();
+            string datasetDirectoryPath = "/home/cartheur/ame/aiventure/aiventure-github/voice/voice-emotion-detector/datasets";
             classifier.LoadData(datasetDirectoryPath);
 
             Console.WriteLine("Enter the path to the audio file for emotion classification:");
