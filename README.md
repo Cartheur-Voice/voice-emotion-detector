@@ -10,14 +10,14 @@ This project is an Emotional Classification application to demonstrate Emotional
 
 ```
 Composition
+├── App
+│   ├── App.csproj
+│   └── Program.cs
 ├── Library
 │   ├── EmotionClassification.csproj
 │   ├── Classifier.cs
 │   └── RAVDESS
 │       └── RAVDESSParser.cs
-├── App
-│   ├── App.csproj
-│   └── Program.cs
 ├── Compsoition.sln
 └── README.md
 ```
