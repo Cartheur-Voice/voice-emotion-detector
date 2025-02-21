@@ -4,15 +4,18 @@ Each of the 7356 RAVDESS files has a unique filename. The filename consists of a
 
 ### Filename identifiers 
 
-* Modality (01 = full-AV, 02 = video-only, 03 = audio-only).
-* Vocal channel (01 = speech, 02 = song).
-* Emotion (01 = neutral, 02 = calm, 03 = happy, 04 = sad, 05 = angry, 06 = fearful, 07 = disgust, 08 = surprised).
-* Emotional intensity (01 = normal, 02 = strong). NOTE: There is no strong intensity for the _neutral_ emotion.
-* Statement (01 = _Kids are talking by the door_, 02 = _Dogs are sitting by the door_).
-* Repetition (01 = 1st repetition, 02 = 2nd repetition).
-* Actor (01 to 24. Odd numbered actors are male, even numbered actors are female).
-* Filename example: 02-01-06-01-02-01-12.mp4 
----
+* Modality - 01 = full-AV, 02 = video-only, 03 = audio-only.
+* Vocal channel - 01 = speech, 02 = song.
+* Emotion - 01 = neutral, 02 = calm, 03 = happy, 04 = sad, 05 = angry, 06 = fearful, 07 = disgust, 08 = surprised.
+* Emotional intensity - 01 = normal, 02 = strong. There is no strong intensity for the _neutral_ emotion.
+* Statement - 01 = _Kids are talking by the door_, 02 = _Dogs are sitting by the door_.
+* Repetition - 01 = 1st repetition, 02 = 2nd repetition.
+* Actor - 01 to 24. Odd numbered actors are male, even numbered actors are female.
+* Filename example: 
+
+`02-01-06-01-02-01-12.wav` 
+
+```
 - Video-only (02)
 - Speech (01)
 - Fearful (06)
@@ -21,7 +24,4 @@ Each of the 7356 RAVDESS files has a unique filename. The filename consists of a
 - 1st Repetition (01)
 - 12th Actor (12)
 - Female, as the actor ID number is even.
----
-### Hints on getting this done in C#
-
-[One](https://github.com/yfliao/Emotion-Classification-Ravdess/blob/master/EmotionsRecognition.ipynb)
+```
