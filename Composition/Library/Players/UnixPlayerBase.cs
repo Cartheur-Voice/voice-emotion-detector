@@ -8,21 +8,37 @@ namespace Cartheur.Presents.Players
     internal abstract class UnixPlayerBase : IPlayer, IRecorder
     {
         private Process _process = null;
-
         internal const string PauseProcessCommand = "kill -STOP {0}";
         internal const string ResumeProcessCommand = "kill -CONT {0}";
-
+        /// <summary>
+        /// Occurs when the playback process has finished.
+        /// </summary>
         public event EventHandler PlaybackFinished;
+        /// <summary>
+        /// Occurs when the recording process has finished.
+        /// </summary>
         public event EventHandler RecordingFinished;
-
+        /// <summary>
+        /// Indicates whether the current process is playing.
+        /// </summary>
         public bool Playing { get; private set; }
+        /// <summary>
+        /// Indicates whether the current process is recording.
+        /// </summary>
         public bool Recording { get; private set; }
-
+        /// <summary>
+        /// Indicates whether the current process is paused.
+        /// </summary>
         public bool Paused { get; private set; }
 
         protected abstract string GetBashCommand(string fileName);
         protected abstract string BashCommandRecording(string fileName, int duration);
-
+        /// <summary>
+        /// Records audio to the specified file for the specified duration.
+        /// </summary>
+        /// <param name="filePath"></param>
+        /// <param name="duration"></param>
+        /// <returns></returns>
         public async Task Record(string filePath, int duration)
         {
             await Stop();
@@ -34,7 +50,10 @@ namespace Cartheur.Presents.Players
             _process.Disposed += HandleRecordingFinished;
             Recording = true;
         }
-
+        /// <summary>
+        /// Plays the specified file.
+        /// </summary>
+        /// <param name="fileName"></param>
         public async Task Play(string fileName)
         {
             await Stop();
@@ -46,7 +65,9 @@ namespace Cartheur.Presents.Players
             _process.Disposed += HandlePlaybackFinished;
             Playing = true;
         }
-
+        /// <summary>
+        /// Pauses the current process if it is playing.
+        /// </summary>
         public Task Pause()
         {
             if (Playing && !Paused && _process != null)
@@ -58,7 +79,10 @@ namespace Cartheur.Presents.Players
 
             return Task.CompletedTask;
         }
-
+        /// <summary>
+        /// Resumes the current process if it is paused.
+        /// </summary>
+        /// <returns></returns>
         public Task Resume()
         {
             if (Playing && Paused && _process != null)
@@ -70,7 +94,10 @@ namespace Cartheur.Presents.Players
 
             return Task.CompletedTask;
         }
-
+        /// <summary>
+        /// Stops the current process and disposes of it.
+        /// </summary>
+        /// <returns></returns>
         public Task Stop()
         {
             if (_process != null)
@@ -85,7 +112,6 @@ namespace Cartheur.Presents.Players
 
             return Task.CompletedTask;
         }
-
         protected Process StartBashProcess(string command)
         {
             var escapedArgs = command.Replace("\"", "\\\"");
@@ -105,7 +131,6 @@ namespace Cartheur.Presents.Players
             process.Start();
             return process;
         }
-
         internal void HandlePlaybackFinished(object sender, EventArgs e)
         {
             if (Playing)
@@ -122,7 +147,11 @@ namespace Cartheur.Presents.Players
                 RecordingFinished?.Invoke(this, e);
             }
         }
-
+        /// <summary>
+        /// Sets the volume of the player to the specified percentage.
+        /// </summary>
+        /// <param name="percent"></param>
+        /// <returns></returns>
         public abstract Task SetVolume(byte percent);
     }
 }

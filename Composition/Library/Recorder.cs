@@ -1,6 +1,5 @@
 ﻿using Cartheur.Presents.Interfaces;
 using System;
-using System.Runtime.InteropServices;
 using System.Threading.Tasks;
 
 namespace Cartheur.Presents
@@ -12,17 +11,14 @@ namespace Cartheur.Presents
     public class Recorder : IRecorder
     {
         private readonly IRecorder _internalRecorder;
-
         /// <summary>
         /// Internally, sets Recording flag to false. Additional handlers can be attached to it to handle any custom logic.
         /// </summary>
         public event EventHandler RecordingFinished;
-
         /// <summary>
         /// Indicates that the audio is currently recording.
         /// </summary>
         public bool Recording => _internalRecorder.Recording;
-
         /// <summary>
         /// Indicates that the audio recording is currently paused.
         /// </summary>
@@ -34,16 +30,9 @@ namespace Cartheur.Presents
         /// <exception cref="Exception">No implementation exist for the current OS</exception>
         public Recorder()
         {
-            if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
-                throw new Exception("No implementation exist for the current OS");
-            else if (RuntimeInformation.IsOSPlatform(OSPlatform.Linux))
-                _internalRecorder = new LinuxRecorder();
-            else
-                throw new Exception("No implementation exist for the current OS");
-
+            _internalRecorder = new LinuxRecorder();
             _internalRecorder.RecordingFinished += OnRecordingFinished;
         }
-
         /// <summary>
         /// Will start a recording session. The fileName parameter can be an absolute path or a path relative to the directory where the library is located, duration is the time recording should continue before saving the file. Sets Recording flag to true. Sets Paused flag to false.
         /// </summary>
@@ -54,7 +43,6 @@ namespace Cartheur.Presents
         {
             await _internalRecorder.Record(fileName, duration);
         }
-
         /// <summary>
         /// Pauses any ongong recording. Sets Paused flag to true. Doesn't modify Recording flag.
         /// </summary>
@@ -63,7 +51,6 @@ namespace Cartheur.Presents
         {
             await _internalRecorder.Pause();
         }
-
         /// <summary>
         /// Resumes any paused recording. Sets Paused flag to false. Doesn't modify Recording flag.
         /// </summary>
@@ -72,7 +59,6 @@ namespace Cartheur.Presents
         {
             await _internalRecorder.Resume();
         }
-
         /// <summary>
         /// Stops any current recording and clears the buffer. Sets Recording and Paused flags to false.
         /// </summary>
@@ -81,16 +67,13 @@ namespace Cartheur.Presents
         {
             await _internalRecorder.Stop();
         }
-
         private void OnRecordingFinished(object sender, EventArgs e)
         {
             RecordingFinished?.Invoke(this, e);
         }
-
         /// <summary>
         /// Sets the playing volume as percent.
         /// </summary>
-        /// <returns></returns>
         public async Task SetVolume(byte percent)
         {
             await _internalRecorder.SetVolume(percent);
