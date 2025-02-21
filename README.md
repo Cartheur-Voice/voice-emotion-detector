@@ -12,12 +12,21 @@ This project is an Emotional Classification application to demonstrate Emotional
 Composition
 ├── App
 │   ├── App.csproj
-│   └── Program.cs
+│   ├── Program.cs
+|   └── recordings
 ├── Library
 │   ├── EmotionClassification.csproj
 │   ├── Classifier.cs
-│   └── RAVDESS
-│       └── RAVDESSParser.cs
+│   ├── LinuxRecorder.cs
+│   ├── Parser.cs
+│   ├── Player.cs
+│   ├── Recorder.cs
+|   ├── Interfaces
+|        ├── IPlayer.cs
+│        └── IRecorder.cs
+|   ├── Players
+|        ├── LinuxPlayer.cs
+│        └── UnixPlayerBase.cs
 ├── Compsoition.sln
 └── README.md
 ```
