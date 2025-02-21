@@ -62,8 +62,12 @@ dotnet run
 
 ### Behaviour
 
-The application will train on the local RAVDESS dataset and predict the participant (you) emotion based upon a samled-input at the microphone, printing it to the terminal. The length of the recording is `1s`, hardcoded presently. A future version will load a configuration file for initialized parameters.
+The application will train on the local RAVDESS dataset and predict the participant (you) emotion based upon a sampled-input at the microphone, printing it to the terminal. The length of the recording is set on line 19 of `Program.cs`. A future version will load a configuration file.
 
 ### Utility
 
 Manifest as a part of capabilities demonstration by the team at Cartheur Research.
+
+#### Errata
+
+Ensure that Nuget Microsoft.ML package is installed _first_ before the Accord packages, should `dotnet restore` fail.
