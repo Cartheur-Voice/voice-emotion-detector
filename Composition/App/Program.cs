@@ -9,18 +9,20 @@ namespace App
     class Program
     {
         public static Recorder VoiceRecorder { get; private set; }
+        public static int RecordingDuration { get; private set; }
 
         static async Task Main(string[] args)
         {
             // Create an instance of the Classifier
             var classifier = new EmotionClassification.Classifier();
-
+            // Set the recording duration
+            RecordingDuration = 1000;
             // Load the dataset
             string datasetDirectoryPath = "/home/cartheur/ame/aiventure/aiventure-github/voice/voice-emotion-detector/datasets";
             classifier.LoadData(datasetDirectoryPath);
 
             VoiceRecorder = new Recorder();
-                await VoiceRecorder.Record(ReturnRecordingFilePath("recorded"), 500);
+                await VoiceRecorder.Record(ReturnRecordingFilePath("recorded"), RecordingDuration);
                 Console.WriteLine("Started recording...");
                 VoiceRecorder.RecordingFinished += RecordingEvent;
                 // Send over for the file for analysis and return the approximated emotion.
