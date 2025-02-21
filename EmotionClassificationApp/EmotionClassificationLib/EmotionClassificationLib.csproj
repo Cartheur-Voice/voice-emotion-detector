@@ -1,16 +1,16 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
+    <TargetFramework>net9.0</TargetFramework>
     <RootNamespace>EmotionClassificationLib</RootNamespace>
     <AssemblyName>EmotionClassificationLib</AssemblyName>
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Accord.MachineLearning" Version="3.8.0" />
+    <PackageReference Include="Accord.Statistics" Version="3.8.0" />
+    <PackageReference Include="Microsoft.ML" Version="4.0.1" />
     <PackageReference Include="NAudio" Version="2.1.0" />
-    <PackageReference Include="Microsoft.ML" Version="1.5.5" />
-    <PackageReference Include="Microsoft.ML.Data" Version="1.5.5" />
-    <PackageReference Include="Microsoft.ML.MLNet" Version="1.5.5" />
   </ItemGroup>
 
 </Project>

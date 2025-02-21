@@ -1,12 +1,8 @@
-using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using Accord.MachineLearning;
 using Accord.MachineLearning.VectorMachines;
 using Accord.MachineLearning.VectorMachines.Learning;
 using Accord.Statistics.Kernels;
-using Accord.MachineLearning.VectorMachines.Learning;
 
 namespace EmotionClassificationLib
 {
@@ -120,6 +116,11 @@ namespace EmotionClassificationLib
 
         public string PredictEmotion(string audioFilePath)
         {
+            if (!File.Exists(audioFilePath))
+            {
+                throw new FileNotFoundException($"The file {audioFilePath} does not exist.");
+            }
+
             var featureVector = ExtractFeatures(audioFilePath);
             var predictedLabel = svm.Decide(featureVector);
             return GetEmotionFromLabel(predictedLabel);
