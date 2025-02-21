@@ -1,13 +1,13 @@
 using System;
 
-namespace EmotionClassificationApp
+namespace App
 {
     class Program
     {
         static void Main(string[] args)
         {
             // Create an instance of the Classifier
-            var classifier = new EmotionClassificationLib.Classifier();
+            var classifier = new EmotionClassification.Classifier();
 
             // Load the dataset
             string datasetDirectoryPath = "/home/cartheur/ame/aiventure/aiventure-github/voice/voice-emotion-detector/datasets";

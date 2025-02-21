@@ -2,9 +2,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31913.202
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{F85E285D-4B47-4B9D-8B1E-6D1D1D1D1D1D}") = "EmotionClassificationLib", "EmotionClassificationLib\EmotionClassificationLib.csproj", "{A1B2C3D4-E5F6-7A8B-9A0B-C1D2E3F4G5H6}"
+Project("{F85E285D-4B47-4B9D-8B1E-6D1D1D1D1D1D}") = "EmotionClassification", "Library\EmotionClassification.csproj", "{A1B2C3D4-E5F6-7A8B-9A0B-C1D2E3F4G5H6}"
 EndProject
-Project("{F85E285D-4B47-4B9D-8B1E-6D1D1D1D1D1D}") = "EmotionClassificationApp", "EmotionClassificationApp\EmotionClassificationApp.csproj", "{H6G5F4E3-D2C1-B0A9-8B7A-6D5C4B3A2B1C}"
+Project("{F85E285D-4B47-4B9D-8B1E-6D1D1D1D1D1D}") = "App", "App\App.csproj", "{H6G5F4E3-D2C1-B0A9-8B7A-6D5C4B3A2B1C}"
 EndProject
 Global
     GlobalSection(SolutionConfigurationPlatforms) = preSolution

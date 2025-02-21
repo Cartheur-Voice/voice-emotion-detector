@@ -4,7 +4,7 @@ using Accord.MachineLearning.VectorMachines;
 using Accord.MachineLearning.VectorMachines.Learning;
 using Accord.Statistics.Kernels;
 
-namespace EmotionClassificationLib
+namespace EmotionClassification
 {
     public class Classifier
     {
