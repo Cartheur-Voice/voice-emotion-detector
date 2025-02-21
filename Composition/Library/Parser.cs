@@ -1,9 +1,9 @@
 using System;
 using System.IO;
 
-namespace EmotionClassificationLib.RAVDESS
+namespace EmotionClassification
 {
-    public class RAVDESSParser
+    public class Parser
     {
         public (string Modality, string VocalChannel, string Emotion, string EmotionalIntensity, string Statement, string Repetition, string Actor) ParseFileName(string fileName)
         {
