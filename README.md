@@ -1,10 +1,10 @@
 ## voice-emotion-detector
 
-What is the emotion of the participant at this measure of time? No peeking!
+What is the emotion of the participant at this measure of time?
 
-## About this project
+## About
 
-This project is an Emotional Classification application to demonstrate Emotional Toys that utilizes the RAVDESS dataset to classify emotions from audio files. It consists of a library for handling the emotion classification logic and a console application for user interaction.
+This project is an _emotional classification_ example to illustrate the sophistication of an _Emotional Toys_ product that utilizes the RAVDESS dataset to classify emotions from audio files geerated during a live session. It consists of a library of emotion classification logic and a console application to demostrate its effectiveness. It could also be easily configured to a Test.
 
 ## Project structure
 
@@ -41,20 +41,20 @@ Composition
 
 ### Installation
 
-1. Clone the repository:
+1. Clone the repository
    ```
    git clone https://github.com/Cartheur-Voice/voice-emotion-detector.git
    cd Composition
    ```
 
-2. Restore the dependencies:
+2. Restore the dependencies
    ```
    dotnet restore
    ```
 
 ### Running the code
 
-To run the console application, navigate to the `App` directory and execute the following command:
+To run the console application, navigate to the `App` directory and execute the following command
 
 ```
 dotnet run
