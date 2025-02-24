@@ -117,6 +117,8 @@ namespace EmotionClassification
             }
 
             var featureVector = ExtractFeatures(audioFilePath);
+            // Leverage the Accord library.
+            // TODO: Resume working here.
             var predictedLabel = svm.Score(featureVector);
             return GetEmotionFromLabel((int)predictedLabel);
         }
