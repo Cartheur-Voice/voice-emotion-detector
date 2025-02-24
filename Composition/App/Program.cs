@@ -3,6 +3,8 @@ using System.IO;
 using System.Threading;
 using System.Threading.Tasks;
 using Cartheur.Presents;
+using Cartheur.Animals.Utilities;
+using Cartheur.Animals.Core;
 
 namespace App
 {
@@ -10,9 +12,15 @@ namespace App
     {
         public static Recorder VoiceRecorder { get; private set; }
         public static int RecordingDuration { get; private set; }
+        public static LoaderPaths Configuration;
+        private static Aeon _thisAeon;
 
         static async Task Main(string[] args)
         {
+            // Create the app with settings.
+            Configuration = new LoaderPaths("Debug");
+            _thisAeon = new Aeon("1+2i");
+            _thisAeon.LoadSettings(Configuration.PathToSettings);
             // Create an instance of the Classifier
             var classifier = new EmotionClassification.Classifier();
             // Set the recording duration

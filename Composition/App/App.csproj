@@ -11,4 +11,10 @@
     <ProjectReference Include="..\Library\EmotionClassification.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Reference Include="Cartheur.Animals">
+      <HintPath>..\lib\Cartheur.Animals.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
 </Project>
