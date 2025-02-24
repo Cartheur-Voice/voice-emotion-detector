@@ -18,6 +18,7 @@ namespace EmotionClassification
             emotionLabels = new Dictionary<string, string>();
         }
 
+
         public void LoadData(string directoryPath)
         {
             if (!Directory.Exists(directoryPath))
@@ -25,7 +26,7 @@ namespace EmotionClassification
                 throw new DirectoryNotFoundException($"The directory {directoryPath} does not exist.");
             }
 
-            audioFiles.AddRange(Directory.GetFiles(directoryPath, "*.wav"));
+            audioFiles.AddRange(Directory.GetFiles(directoryPath, "*.wav", SearchOption.AllDirectories));
             LoadEmotionLabels();
         }
 
@@ -82,7 +83,7 @@ namespace EmotionClassification
             {
                 Complexity = 100
             };
-
+            // Use the learn from bph
             svm = teacher.Learn(featureArray, labelArray);
         }
 

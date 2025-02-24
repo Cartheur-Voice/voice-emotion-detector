@@ -5,9 +5,10 @@
   <item name="ip" value="Copyright 2008-2025 Cartheur"/>
   <item name="version" value="0.0.1"/>
   <!--  <item name="trainingdatafiles" value="/home/cartheur/ame/aiventure/aiventure-github/voice/voice-emotion-detector/datasets"/>
-  <item name="recordedwav" value="/home/cartheur/ame/aiventure/aiventure-github/voice/voice-emotion-detector/datasets/recordings/record.wav"/> -->
-  <!-- <item name="trainingdatafiles" value="C:\ame\aiventure\aiventure-github\voice\voice-emotion-detector\datasets"/> 
-  <item name="recordedwav" value="C:\ame\aiventure\aiventure-github\voice\voice-emotion-detector\recordings\recorded.wav"/> -->
+  <item name="filename" value="/home/cartheur/ame/aiventure/aiventure-github/voice/voice-emotion-detector/datasets/recordings/record.wav"/> -->
+  <item name="trainingdatafiles" value="C:\ame\aiventure\aiventure-github\voice\voice-emotion-detector\datasets"/> 
+  <item name="filename" value="C:\ame\aiventure\aiventure-github\voice\voice-emotion-detector\Composition\App\recordings\recorded.wav"/>
+  <item name="usefile" value="true"/>
   <item name="logfile" value="logs"/>
   <!-- Extended settings -->
   <item name="authorization" value="false"/>
