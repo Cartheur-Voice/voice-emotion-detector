@@ -4,7 +4,8 @@
   <item name="buildconfiguration" value="Debug"/>
   <item name="ip" value="Copyright 2008-2025 Cartheur"/>
   <item name="version" value="0.0.1"/>
-  <item name="trainingdatafiles" value="C:\ame\aiventure\aiventure-github\voice\voice-emotion-detector\datasets"/>
+  <item name="trainingdatafiles" value="/home/cartheur/ame/aiventure/aiventure-github/voice/voice-emotion-detector/datasets"/>
+  <!-- <item name="trainingdatafiles" value="C:\ame\aiventure\aiventure-github\voice\voice-emotion-detector\datasets"/> -->
   <item name="logfile" value="logs"/>
   <!-- Extended settings -->
   <item name="authorization" value="false"/>
