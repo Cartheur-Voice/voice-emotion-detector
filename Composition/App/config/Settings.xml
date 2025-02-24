@@ -2,14 +2,14 @@
 <root>
   <!-- General settings -->
   <item name="buildconfiguration" value="Debug"/>
-  <item name="ip" value="Copyright 2008-2018 Cartheur"/>
-  <item name="version" value="2.4.8"/>
+  <item name="ip" value="Copyright 2008-2025 Cartheur"/>
+  <item name="version" value="0.0.1"/>
+  <item name="trainingdatafiles" value="C:\ame\aiventure\aiventure-github\voice\voice-emotion-detector\datasets"/>
+  <item name="logfile" value="logs"/>
+  <!-- Extended settings -->
   <item name="authorization" value="false"/>
   <item name="differencemagnitude" value="1E-5"/>
-  <item name="holdingcurrency" value="EUR"/>
-  <item name="logfile" value="logs"/>
   <item name="numberofunitstotransact" value="10"/>
-  <item name="tradingcurrency" value="GBP"/>
   <!-- Specific to Encog -->
   <item name="errorresolution" value="5E-4"/>
   <item name="maxtrainingerror" value="5E-4"/>

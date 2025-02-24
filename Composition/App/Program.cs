@@ -14,20 +14,23 @@ namespace App
         public static int RecordingDuration { get; private set; }
         public static LoaderPaths Configuration;
         private static Aeon _thisAeon;
+        public static string TrainingDataFiles { get; private set; }
 
         static async Task Main(string[] args)
         {
             // Create the app with settings.
             Configuration = new LoaderPaths("Debug");
-            _thisAeon = new Aeon("1+2i");
+            _thisAeon = new Aeon("dot");
+            // Load the given application configuration.
             _thisAeon.LoadSettings(Configuration.PathToSettings);
+            TrainingDataFiles = _thisAeon.GlobalSettings.GrabSetting("trainingdatafiles");
             // Create an instance of the Classifier
             var classifier = new EmotionClassification.Classifier();
             // Set the recording duration
             RecordingDuration = 1000;
             // Load the dataset
-            string datasetDirectoryPath = "/home/cartheur/ame/aiventure/aiventure-github/voice/voice-emotion-detector/datasets";
-            classifier.LoadData(datasetDirectoryPath);
+            //string datasetDirectoryPath = "/home/cartheur/ame/aiventure/aiventure-github/voice/voice-emotion-detector/datasets";
+            classifier.LoadData(TrainingDataFiles);
 
             VoiceRecorder = new Recorder();
                 await VoiceRecorder.Record(ReturnRecordingFilePath("recorded"), RecordingDuration);
