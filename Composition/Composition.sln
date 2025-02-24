@@ -6,8 +6,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmotionClassification", "Li
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "App", "App\App.csproj", "{2C541591-170D-4268-B64D-75AF5401A021}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cartheur.Animals", "..\..\..\..\aiventure-david\code\nine\animals\Cartheur.Animals.csproj", "{EBDAFC7A-5EE1-C040-04D2-8DA579813576}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -22,12 +20,11 @@ Global
 		{2C541591-170D-4268-B64D-75AF5401A021}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2C541591-170D-4268-B64D-75AF5401A021}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2C541591-170D-4268-B64D-75AF5401A021}.Release|Any CPU.Build.0 = Release|Any CPU
-		{EBDAFC7A-5EE1-C040-04D2-8DA579813576}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{EBDAFC7A-5EE1-C040-04D2-8DA579813576}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{EBDAFC7A-5EE1-C040-04D2-8DA579813576}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{EBDAFC7A-5EE1-C040-04D2-8DA579813576}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FC13959A-C6E0-4CDA-B7B0-3D320796B858}
 	EndGlobalSection
 EndGlobal

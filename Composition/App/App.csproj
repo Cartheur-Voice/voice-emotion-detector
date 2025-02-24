@@ -17,4 +17,10 @@
     </Reference>
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="config\Settings.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>
