@@ -398,4 +398,6 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
-Composition/App/recordings/recorded.wav
+
+# Output recorded files
+# Composition/App/recordings/recorded.wav
