@@ -4,8 +4,8 @@
   <item name="buildconfiguration" value="Debug"/>
   <item name="ip" value="Copyright 2003-2025 Cartheur"/>
   <item name="version" value="0.0.1"/>
-  <item name="trainingdata" value="../datasets"/>
-  <item name="recorded" value="recordings/recorded.wav"/> 
+  <item name="trainingdatadirectory" value="../datasets"/>
+  <item name="recordedoutputdirectory" value="recordings/recorded.wav"/> 
   <item name="usefile" value="true"/>
   <item name="logfile" value="logs"/>
   <!-- Extended settings -->
