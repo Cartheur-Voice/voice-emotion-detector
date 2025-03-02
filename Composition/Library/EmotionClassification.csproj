@@ -13,4 +13,10 @@
     <PackageReference Include="NAudio" Version="2.1.0" />
   </ItemGroup>
 
+    <ItemGroup>
+    <Reference Include="Boagaphish">
+      <HintPath>..\lib\Boagaphish.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
 </Project>
